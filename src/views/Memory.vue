@@ -4,19 +4,19 @@
     <div class="question">
       <label for="display">What is displayed?</label>
       <div class="display-choices">
-        <button v-on:click="displayLabel(1)">1️⃣</button>
-        <button v-on:click="displayLabel(2)">2️⃣</button>
-        <button v-on:click="displayLabel(3)">3️⃣</button>
-        <button v-on:click="displayLabel(4)">4️⃣</button>
+        <span v-on:click="displayLabel(1)">1️⃣</span>
+        <span v-on:click="displayLabel(2)">2️⃣</span>
+        <span v-on:click="displayLabel(3)">3️⃣</span>
+        <span v-on:click="displayLabel(4)">4️⃣</span>
       </div>
     </div>
 
     <div v-if="instructions.label" class="instructions">
-      <span>Press the button labeled "{{ instructions.label }}"</span>
+      <span>Press the button <b>labeled "{{ instructions.label }}"</b></span>
       <span v-if="currentStep === 5">, and done ✅</span>
     </div>
     <div v-if="instructions.position" class="instructions">
-      <span>Press on button at position {{ instructions.position }}</span>
+      <span>Press on button at <b>position {{ instructions.position }}</b></span>
       <span v-if="currentStep === 5">, and done ✅</span>
     </div>
     
@@ -24,19 +24,19 @@
     <div v-if="askingPosition" class="question">
       <label for="display">What is the position of that label?</label>
       <div class="display-choices">
-        <button v-on:click="setPosition(1)">1️⃣</button>
-        <button v-on:click="setPosition(2)">2️⃣</button>
-        <button v-on:click="setPosition(3)">3️⃣</button>
-        <button v-on:click="setPosition(4)">4️⃣</button>
+        <span v-on:click="setPosition(1)">1️⃣</span>
+        <span v-on:click="setPosition(2)">2️⃣</span>
+        <span v-on:click="setPosition(3)">3️⃣</span>
+        <span v-on:click="setPosition(4)">4️⃣</span>
       </div>
     </div>
     <div v-if="askingLabel" class="question">
       <label for="display">What is the label of the button?</label>
       <div class="display-choices">
-        <button v-on:click="setLabel(1)">1️⃣</button>
-        <button v-on:click="setLabel(2)">2️⃣</button>
-        <button v-on:click="setLabel(3)">3️⃣</button>
-        <button v-on:click="setLabel(4)">4️⃣</button>
+        <span v-on:click="setLabel(1)">1️⃣</span>
+        <span v-on:click="setLabel(2)">2️⃣</span>
+        <span v-on:click="setLabel(3)">3️⃣</span>
+        <span v-on:click="setLabel(4)">4️⃣</span>
       </div>
     </div>
 
@@ -160,8 +160,8 @@ export default {
 
 <style>
 .instructions {
-  font-size: 2em;
-  padding: 30px;
+  font-size: 1.5em;
+  padding: 15px;
 }
 .question {
   padding: 5px;
@@ -171,7 +171,7 @@ export default {
   justify-content: space-around;
   padding: 12px;
 }
-.display-choices button {
+.display-choices span {
   font-size: 2em;
 }
 </style>
