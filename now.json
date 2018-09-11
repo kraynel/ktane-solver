@@ -1,0 +1,15 @@
+{
+  "name": "Keep Talking Solver",
+  "type": "static",
+  "static": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "alias": "ktane-solver",
+  "files": ["dist"]
+}
